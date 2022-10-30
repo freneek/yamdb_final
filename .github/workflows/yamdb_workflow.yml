@@ -59,7 +59,10 @@ jobs:
         script: |
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker-compose -f /home/freneek/docker-compose.yaml up -d
+          sudo docker-compose -f /home/freneek/docker-compose.yaml up -d --build
+          sudo docker-compose exec web python manage.py makemigrations review
+          sudo docker-compose exec web python manage.py migrate
+          sudo docker-compose exec web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
