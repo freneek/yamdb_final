@@ -33,3 +33,5 @@ ReadMe
 Nikita Feyuk
 Igor Polyakov
 Andrey Rodin
+
+https://github.com/freneek/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
