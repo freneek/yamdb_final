@@ -6,7 +6,7 @@ services:
     volumes:
       - /var/lib/postgresql/data/
     env_file:
-      - ./app/infra/.env
+      - ./.env
   web:
     image: freneek/yamdb_final:latest
     restart: always
@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
     env_file:
-      - ./app/infra/.env
+      - ./.env
   nginx:
     image: nginx:1.21.3-alpine
     ports:
