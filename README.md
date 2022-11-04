@@ -34,4 +34,7 @@ Nikita Feyuk
 Igor Polyakov
 Andrey Rodin
 
+### Проект развернут по адресу
+http://62.84.115.127/
+
 https://github.com/freneek/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
