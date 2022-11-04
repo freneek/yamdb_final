@@ -74,6 +74,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d 
+            sudo docker cp /home/${{ secrets.DOCKER_USERNAME }}/redoc.yaml nginx:/var/html/static/redoc.yaml
 
   send_message:
     runs-on: ubuntu-latest
